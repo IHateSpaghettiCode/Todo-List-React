@@ -6,7 +6,7 @@ function App() {
     <div className="container">
       {/* Navbar */}
       <nav className="navbar">
-        <a href="#inicio">Inicio</a>
+        <a href="#inicio">Inicio!</a>
         <a href="#programas">Programas</a>
         <a href="#acerca">Acerca</a>
         <a href="#contacto">Contacto</a>
