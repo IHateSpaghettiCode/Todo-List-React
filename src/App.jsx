@@ -7,14 +7,14 @@ function App() {
       {/* Navbar */}
       <nav className="navbar">
         <a href="#inicio">Inicio.</a>
-        <a href="#programas">Programas</a>
-        <a href="#acerca">Acerca</a>
-        <a href="#contacto">Contacto</a>
+        <a href="#programas">Programas.</a>
+        <a href="#acerca">Acerca.</a>
+        <a href="#contacto">Contacto.</a>
       </nav>
 
       {/* Encabezado */}
       <header id="inicio" className="header">
-        <h1>SENA</h1>
+        <h1>SENA.</h1>
         <p>
           Centro de Gestión de Mercados, Logística y Tecnologías <br />
           Bogotá
