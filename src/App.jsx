@@ -1,49 +1,53 @@
-import TodoItem from "./TodoItem"
-import { useState } from "react"
+import React from "react";
+import "./App.css";
 
-export default function App() {
-
-  const [tareas, setTareas] = useState([]);
-
-  const [input, setInput] = useState("");
-
-
-  const   agregarTarea = () => {
-
-    if (input.trim()) {
-      setTareas([...tareas, { id: Date.now(), text: input.trim(), completed: false }]);
-      setInput("");
-    };
-
-  }
-
-
-  const toggleCompleted = (id) => {
-    setTareas(
-      tareas.map((tarea) =>
-        tarea.id === id ? { ...tarea, completed: !tarea.completed } : tarea
-      )
-    );
-  };
-
-
-  const eliminarTarea = (id) => {
-    setTareas(tareas.filter((tarea) => tarea.id !== id));
-
-  }
-
+function App() {
   return (
-    <div className="max-w-md mx-auto mt-10 p-2  rounded shadow">
-      <h1 className="text-3xl font-bold mb-5 text-center">TODO LIST APP</h1>
-      <div className="flex gap-3 mb-5">
-        <input className="flex-1 p-2 border rounded" type="text" value={input} onChange={(e) => setInput(e.target.value)} placeholder="Añadir Tarea" />
-        <button className="bg-blue-500 text-white px-4 p-y-2 rounded" onClick={agregarTarea} >Añadir Tareas</button>
-      </div>
+    <div className="container">
+      {/* Navbar */}
+      <nav className="navbar">
+        <a href="#inicio">Inicio</a>
+        <a href="#programas">Programas</a>
+        <a href="#acerca">Acerca</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
 
-      <div className="space-y-2 ">
-        {tareas.map((tarea) => (<TodoItem key={tarea.id} tarea={tarea} toggleCompleted={toggleCompleted} eliminarTarea={eliminarTarea} />))}
-      </div>
+      {/* Encabezado */}
+      <header id="inicio" className="header">
+        <h1>SENA</h1>
+        <p>
+          Centro de Gestión de Mercados, Logística y Tecnologías <br />
+          Bogotá
+        </p>
+      </header>
 
+      {/* Sección Programas */}
+      <section id="programas" className="programas">
+        <h2>Programas</h2>
+        <div className="cards">
+          <div className="card">ADSO</div>
+          <div className="card">Redes de Datos</div>
+          <div className="card">Logística</div>
+        </div>
+      </section>
+
+      {/* Sección Contacto */}
+      <section id="contacto" className="contacto">
+        <h2>Contacto</h2>
+        <form className="formulario">
+          <input type="text" placeholder="Nombre" />
+          <input type="email" placeholder="Correo" />
+          <textarea placeholder="Mensaje" rows="4"></textarea>
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+
+      {/* Footer */}
+      <footer className="footer">
+        © 2025 SENA - Centro de Gestión de Mercados, Logística y Tecnologías
+      </footer>
     </div>
-  )
+  );
 }
+
+export default App;

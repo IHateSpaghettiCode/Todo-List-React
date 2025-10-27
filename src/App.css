@@ -1,42 +1,148 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* Estilos generales */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #fff;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.navbar a:hover {
+  color: #007b55;
+}
+
+/* Header */
+.header {
   text-align: center;
+  background-color: #007b55;
+  color: white;
+  padding: 50px 20px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #656cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.header h1 {
+  margin: 0;
+  font-size: 2.5em;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header p {
+  margin-top: 10px;
+  font-size: 1.1em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* Programas */
+.programas {
+  background-color: white;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.programas h2 {
+  margin-bottom: 30px;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
 }
 
 .card {
-  padding: 2em;
+  width: 180px;
+  height: 120px;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  transition: background-color 0.3s;
 }
 
-.read-the-docs {
-  color: #888;
+.card:hover {
+  background-color: #d8f3dc;
+}
+
+/* Contacto */
+.contacto {
+  background-color: #f9f9f9;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.contacto h2 {
+  margin-bottom: 20px;
+}
+
+.formulario {
+  background-color: white;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.formulario input,
+.formulario textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1em;
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+  outline: none;
+  border-color: #007b55;
+}
+
+.formulario button {
+  background-color: #007b55;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.formulario button:hover {
+  background-color: #006644;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9em;
+  color: #777;
+  background-color: #fff;
+  margin-top: auto;
 }
